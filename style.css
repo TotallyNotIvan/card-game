@@ -1,22 +1,82 @@
 body {
     background-color: #35654d;
 }
-.heading{
-    font-size: 10vmax;
-    background-color: #653735;
+.title{
+    font-size: 5vmax;
+}
+.header{
+    font-size: 2rem;
+    background-color: #4B3B47;
+    padding: 2vmax;
+}
+.header img{
+    max-height: 0vmax;
+}
+.header span{
+    padding: 0;
+}
+@media screen and (max-width: 670px){
+    .title{
+        font-size: 10vmax;
+        max-width: 1rem;
+    }
+    .header{
+        font-size: 0vmax;
+    }
+    .header img{
+        max-height: 10vmax;
+        padding-left:27vmax ;
+        cursor: pointer;
+    }
+}
+    
+.subtitle{
+    font-size: 5vmax;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+}
+.card{
+    font-size: 2.5rem;
+    border: .25rem solid #171616;
+    color:#050404;
+    border-radius: .5rem;
+    padding-left: .25rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color:#D8D8D8;
+    width: 5rem;
+}
+/* .card img{
+    transform: translate(1rem);
+} */
+.suit{
+    height: 1.5rem;
+}
+.spacer{
+    font-size: 7vmax;
 }
 .button{
     font-size: 3vmax;
     border: .3rem solid #D8D8D8;
-    color:#D8D8D8;
+    color:#040303;
     border-radius: 1rem;
     padding: .5rem; 
     padding-left: .7rem;
     padding-right: .7rem;
     cursor: pointer;
+    background-color:#D8D8D8;
 }
 .button:hover{
     border-color: #a91818;
-    color:#a91818;
+    color:#201e1e;
+    background-color:#a91818;
 }
-    
+.whowon{
+    font-size: 5vmax;
+}
+.controls{
+    grid-column: span 2;
+}
