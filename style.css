@@ -74,9 +74,9 @@ body {
     color:#201e1e;
     background-color:#a91818;
 }
-.whowon{
+/* .whowon{
     font-size: 5vmax;
-}
+} */
 .controls{
     grid-column: span 2;
 }

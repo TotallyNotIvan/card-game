@@ -1,11 +1,11 @@
 cash=cash-100
 if (dealer > handone){
-    document.write("dealer wins");
+    document.write("Loss");
     cash=cash+200
 }else if (dealer == handone){
-    document.write("you tie");
+    document.write("Push");
     cash=cash+100
 }
 else {
-    document.write("you win");
+    document.write("Win");
 }

@@ -6,45 +6,53 @@
         <title>Document</title>
         <link rel="stylesheet" href="other/modnorm.min.css">
         <link rel="stylesheet" href="style.css">
+        <script src="JavaScript/main.js"></script>
     </head>
     <body>
         <script>
             let cash=1000
+            let bet=100
         </script>
-        <div class="header">
+        <header class="header">
             <span class="title">Table 72</span>
             <span> Rules</span>
             <span> About</span>
             <span> Other</span>
             <span> Support</span>
             <img src="SVGs/menu.svg" alt="menu"></svg>
-        </div>
-        
+        </header>
+        <span>$</span>
+        <span id="cash">1000</span>
+        <p id="wl">Push</p>
         <div class="grid-container">
             <div class="grid-item">
                 <p class="subtitle">Dealer:</p>
                 <div class="card">
-                    <span><script src="JavaScript/numgen1.js"></script></span>
-                    <img class="suit" src="SVGs/clubs.svg" alt="clubs"></svg>
+                    <span id="dealerhand">A</span>
+                    <img class="suit" id='dealersuit'src="SVGs/clubs.svg" alt="clubs">
+                    <span id="handoneColor"></span>
                 </div>
             </div>
             <div class="grid-item">
                 <p class="subtitle">Player1:</p>
                 <div class="card">
-                    <span><script src="JavaScript/numgen2.js"></script></span>
-                    <img class="suit" src="SVGs/heart.svg" alt="hearts"></svg>
+                    <span id="handone">A</span>
+                    <img class="suit" id="handonesuit" src="SVGs/heart.svg" alt="hearts">
                 </div>
             </div>
             <div class="controls">
                 <p class="spacer"></p>
-                <span class="button">Deal</span>
+                <button class=button onclick="betDown()">&#8681</button>
+                <span id="bet">100</span>
+                <button class=button onclick="betUp()">&#8679</button>
+                <p></p>
+                <button class=button onclick="deal()">Deal</button>
+                <!-- <span class="button">Deal</span>
                 <span class="button">Hit</span>
                 <span class="button">Stand</span>
                 <span class="button">Double</span>
-                <span class="button">Split</span>
+                <span class="button">Split</span> -->
             </div>
         </div>
-        
-        <p class="whowon"><script src="JavaScript/win.js"></script></p>
     </body>
 </html>
