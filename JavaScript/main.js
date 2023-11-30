@@ -1,27 +1,45 @@
+let red = "#a91818";
+let black = "#000000";
 function deal(){
     var dealerhand = Math.floor((Math.random()*13)+2)
     if (dealerhand ==14) {
         dealerhand = "A";
+        dealerhandValue = 11;
     }else if (dealerhand==13){
         dealerhand = "K";
+        dealerhandValue = 10;
     }else if (dealerhand==12){
         dealerhand = "J";
+        dealerhandValue = 10;
     }else if (dealerhand==11){
         dealerhand = "Q";
+        dealerhandValue = 10;
+    }
+    else{
+        dealerhandValue = dealerhand;
     }
     document.getElementById('dealerhand').innerHTML = dealerhand;
+    document.getElementById('dealerhandValue').innerHTML = dealerhandValue;
 
     var handone = Math.floor((Math.random()*13)+2)
     if (handone==14) {
         handone= "A";
+        handoneValue = 11;
     }else if (handone==13){
         handone= "K";
+        handoneValue = 10;
     }else if (handone==12){
         handone= "J";
+        handoneValue = 10;
     }else if (handone==11){
         handone= "Q";
+        handoneValue = 10;
+    }
+    else{
+        handoneValue = handone;
     }
     document.getElementById('handone').innerHTML = handone;
+    document.getElementById('handoneValue').innerHTML = handoneValue;
 
     cash=cash-bet
     if (dealerhand > handone){
@@ -36,9 +54,6 @@ function deal(){
     }    
     document.getElementById('wl').innerHTML = wl;
     document.getElementById('cash').innerHTML = cash;
-
-    red='#a91818'
-    black="#000000"
 
     let handonesuit = Math.floor((Math.random()*4))
     if (handonesuit==1) {
@@ -60,13 +75,13 @@ function deal(){
     let dealersuit = Math.floor((Math.random()*4))
     if (dealersuit==1) {
         dealersuit= "SVGs/heart.svg";
-        dealerColor=red
+        dealerColor='#a91818'
     }else if (dealersuit==2){
         dealersuit= "SVGs/spades.svg";
         dealerColor=black
     }else if (dealersuit==3){
         dealersuit= "SVGs/diamonds.svg";
-        dealerColor=red
+        dealerColor='#a91818'
     }else if (dealersuit==0){
         dealersuit= "SVGs/clubs.svg";
         dealerColor=black
