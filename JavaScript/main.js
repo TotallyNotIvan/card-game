@@ -1,5 +1,5 @@
-let red = "#a91818";
-let black = "#000000";
+// let red = "#a91818";
+// let black = "#000000";
 function deal(){
     var dealerhand = Math.floor((Math.random()*13)+2)
     if (dealerhand ==14) {
@@ -41,35 +41,19 @@ function deal(){
     document.getElementById('handone').innerHTML = handone;
     // document.getElementById('handoneValue').innerHTML = handoneValue;
 
-    cash=cash-bet
-    if (dealerhandValue > handoneValue){
-        var wl="Loss";
-    }else if (dealerhandValue == handoneValue){
-        var wl="Push";
-        cash=cash+bet
-    }
-    else {
-        var wl="Win";
-        cash=cash+2*bet
-    }    
-    document.getElementById('wl').innerHTML = wl;
-    document.getElementById('cash').innerHTML = cash;
-
     let handonesuit = Math.floor((Math.random()*4))
     if (handonesuit==1) {
         handonesuit= "SVGs/heart.svg";
-        dealerColor=red
+        // dealerColor=red
     }else if (handonesuit==2){
         handonesuit= "SVGs/spades.svg";
-        dealerColor=black
+        // dealerColor=black
     }else if (handonesuit==3){
         handonesuit= "SVGs/diamonds.svg";
-        dealerColor=red
+        // dealerColor=red
     }else if (handonesuit==0){
         handonesuit= "SVGs/clubs.svg";
-        handoneColor=black
-    }else{
-
+        // handoneColor=black
     }
     document.getElementById('handonesuit').src = handonesuit;
     // document.getElementById('handoneColor').innerHTML = handoneColor;
@@ -95,8 +79,6 @@ function deal(){
         // dealerColor=black
         // document.getElementById('dealerColor').innerHTML = dealerColor;
         // document.getElementById('dealersuit').src = dealersuit;
-    }else{
-
     }
     document.getElementById('dealersuit').src = dealersuit;
     // document.getElementById('dealerColor').innerHTML = dealerColor;
@@ -112,6 +94,19 @@ function deal(){
     // }else{
     //     document.getElementById('dealerColor').innerHTML = "#a91818";
     // }
+    cash=cash-bet
+    if (dealerhandValue > handoneValue){
+        var wl="Loss";
+    }else if (dealerhandValue == handoneValue){
+        var wl="Push";
+        cash=cash+bet
+    }
+    else {
+        var wl="Win";
+        cash=cash+2*bet
+    }    
+    document.getElementById('wl').innerHTML = wl;
+    document.getElementById('cash').innerHTML = cash;
     
 }
 
