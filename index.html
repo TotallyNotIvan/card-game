@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="other/modnorm.min.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="JavaScript/main.js"></script>
+    </head>
+    <body>
+        <script>
+            let cash=1000
+            let bet=100
+        </script>
+        <header class="header">
+            <span class="label">Table 72</span>
+            <nav id="main-nav" class="topnav">
+                <a class="nav-item">
+                  <span class="label">Rules</span>
+                </a>
+                <a class="nav-item">
+                  <span class="label">About</span>
+                </a>
+                <a class="nav-item">
+                  <span class="label">Credits</span>
+                </a>
+                <a class="nav-item">
+                  <span class="label">More</span>
+                </a>
+                <a class="nav-item more">
+                  <span class="label">Support</span>
+                </a>
+                <a href="javascript:void(0);" class="nav-item trigram" onclick="navToggle()">&#9776;</a>
+              </nav>
+            <!-- <span> Rules</span>
+            <span> About</span>
+            <span> Other</span>
+            <span> Support</span>
+            <img src="SVGs/menu.svg" alt="menu"></svg> -->
+        </header>
+        <!-- <span>$</span> -->
+        <!-- <span id="cash">1000</span> -->
+        <p id="wl">Push</p>
+        <div class="grid-container">
+            <div class="grid-item">
+                <p class="subtitle">Dealer:</p>
+                <!-- <span id="dealerhandValue">11</span> -->
+                <div class="card">
+                    <span id="dealerhand">A</span>
+                    <img class="suit" id='dealersuit'src="SVGs/clubs.svg" alt="clubs">
+                    <!-- <span id="handoneColor"></span> -->
+                </div>
+            </div>
+            <div class="grid-item">
+                <!-- <p class="subtitle">Player1:</p> -->
+                <p class="subtitle">You:</p>
+                <!-- <span id="handoneValue">11</span> -->
+                <div class="card">
+                    <span id="handone">A</span>
+                    <img class="suit" id="handonesuit" src="SVGs/heart.svg" alt="hearts">
+                    <!-- <span id="dealerColor"></span> -->
+                </div>
+            </div>
+            <div class="controls">
+                <!-- <p class="spacer"></p>
+                <button class=button onclick="betDown()">&#8681</button>
+                <span id="bet">100</span>
+                <button class=button onclick="betUp()">&#8679</button>
+                <p></p> -->
+                <button class=button onclick="deal()">Deal</button>
+                <!-- <span class="button">Deal</span>
+                <span class="button">Hit</span>
+                <span class="button">Stand</span>
+                <span class="button">Double</span>
+                <span class="button">Split</span> -->
+            </div>
+        </div>
+    </body>
+</html>
